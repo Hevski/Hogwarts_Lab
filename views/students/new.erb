@@ -7,7 +7,7 @@
   <input type="text" name="last_name" id="last-name"/>
 
   <label for="house-select">Select a house:</label>
-  <select id="house_id" name="house_id">
+  <select id="house" name="house_id">
     <% House.all.each do |house| %>
     <option value="<%= house.id %>"><%= house.name %></option>
     <%end%>
