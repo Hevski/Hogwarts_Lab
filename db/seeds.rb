@@ -39,7 +39,7 @@ hufflepuff.save()
 student1 = Student.new({
   'first_name' => 'Barry',
   'last_name' => 'Potter',
-  'house' => 'Gryffindor',
+  'house_id' => gryffindor.id,
   'age' => 12
   })
 
@@ -48,7 +48,7 @@ student1 = Student.new({
 student2 = Student.new({
   'first_name' => 'Ron',
   'last_name' => 'Weasley',
-  'house' => 'Gryffindor',
+  'house_id' => gryffindor.id,
   'age' => 11
   })
 
@@ -57,7 +57,7 @@ student2.save()
 student3 = Student.new({
   'first_name' => 'Draco',
   'last_name' => 'Malfoy',
-  'house' => 'Slytherin',
+  'house_id' => slytherin.id,
   'age' => 12
   })
 
