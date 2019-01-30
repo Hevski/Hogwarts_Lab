@@ -8,13 +8,13 @@
 
   <label for="house-select">Select a house:</label>
   <select id="house" name="house_id">
-    <% House.all.each do |house| %>
-    <option value="<%= house.name %><%= @students.house.name %><%= house.id %>"></option>
-    <%end%>
-    </select>
+    <% @houses.each do |house| %>
+      <option value="<%= house.id %>"><%= house.name %></option>
+    <% end %>
+  </select>
 
-    <label for="age">Age:</label>
-    <input type="number" name="age" id="age"/>
+  <label for="age">Age:</label>
+  <input type="number" name="age" id="age"/>
 
-    <input type="submit" value="Add Student"/>
+  <input type="submit" value="Add Student"/>
 </form>

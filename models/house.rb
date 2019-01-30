@@ -52,5 +52,7 @@ attr_accessor :name, :url
     return result
   end
 
+  #how to call students on a house?
+
 
 end

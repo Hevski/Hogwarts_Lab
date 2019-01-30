@@ -1,4 +1,5 @@
 require_relative('../models/student')
+require ('pry')
 
 
 get '/students' do
@@ -7,6 +8,7 @@ get '/students' do
 end
 
 get '/students/new' do
+  @houses = House.all()
   erb(:"students/new")
 end
 

@@ -7,7 +7,7 @@ Student.delete_all()
 House.delete_all()
 
 gryffindor = House.new({
-  'name' => 'gryffindor',
+  'name' => 'Gryffindor',
   'url' => "/images/gryffindor_logo.jpg"
   })
 
