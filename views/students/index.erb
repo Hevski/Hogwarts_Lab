@@ -1,5 +1,7 @@
 <h1>ALL Students</h1>
 
+<div id="student-container">
+<div class="students-index">
 <% @students.each do |student| %>
       <p>First Name: <%= student.first_name() %></p>
       <p>Last Name: <%= student.last_name %></p>
@@ -11,3 +13,5 @@
         <input type="submit" value="Delete Student"/></form>
       <hr />
 <% end %>
+</div>
+</div>
