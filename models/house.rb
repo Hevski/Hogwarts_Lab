@@ -48,7 +48,7 @@ attr_accessor :name, :url
     sql = "SELECT * FROM houses WHERE id = $1"
     values = [id]
     houses = SqlRunner.run( sql, values )
-    result = House.new( houses.first )
+    result = House.new(houses.first)
     return result
   end
 

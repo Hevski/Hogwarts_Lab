@@ -15,3 +15,13 @@ post '/students' do
   @students.save()
   erb(:"students/create")
 end
+
+get '/students/:id' do
+  @students = Student.find(params[:id])
+  erb(:"students/show")
+end
+
+get '/students/:id/edit' do
+  @students = Student.find(params[:id])
+  erb(:"students/edit")
+end

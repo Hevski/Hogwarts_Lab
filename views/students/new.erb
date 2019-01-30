@@ -1,3 +1,4 @@
+<h1>Add New Student</h1>
 <form method="post" action="/students">
   <label for="first-name">FIRST NAME:</label>
   <input type="text" name="first_name" id="first-name"/>
@@ -6,11 +7,10 @@
   <input type="text" name="last_name" id="last-name"/>
 
   <label for="house-select">Select a house:</label>
-  <select id="house-select" name="house">
-    <option value="Gryffindor">Gryffindor</option>
-    <option value="Ravenclaw">Ravenclaw</option>
-    <option value="Hufflepuff">Hufflepuff</option>
-    <option value="Slytherin">Slytherin</option>
+  <select id="house_id" name="house_id">
+    <% House.all.each do |house| %>
+    <option value="<%= house.id %>"><%= house.name %></option>
+    <%end%>
     </select>
 
     <label for="age">Age:</label>

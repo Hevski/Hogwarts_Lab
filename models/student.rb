@@ -4,7 +4,7 @@ require_relative('./house.rb')
 class Student
 
   attr_reader :id
-  attr_accessor :first_name, :last_name, :age
+  attr_accessor :first_name, :last_name, :house_id, :age
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -53,13 +53,17 @@ class Student
     SqlRunner.run(sql, values)
   end
 
+  # def house()
+  #   sql = "SELECT * FROM houses WHERE id = $1"
+  #   values = [@house_id]
+  #   results = SqlRunner.run(sql, values)
+  #   houses = results[0]
+  #   house = House.new(houses)
+  #   return house
+  # end
+
   def house()
-    sql = "SELECT * FROM houses WHERE id = $1"
-    values = [@house_id]
-    results = SqlRunner.run(sql, values)
-    houses = results[0]
-    house = House.new(houses)
-    return house
+    return House.find(@house_id)
   end
 
 end
