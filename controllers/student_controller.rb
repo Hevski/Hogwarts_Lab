@@ -31,3 +31,8 @@ post '/students/:id' do
   student.update
   redirect '/students'
 end
+
+post '/students/:id/delete' do
+  @students = Student.find(params[:id]).delete
+  redirect '/students'
+end
