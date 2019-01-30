@@ -6,9 +6,21 @@
 <label for="last-name">Last Name:</label>
 <input type="text" name="last_name" id="last-name" value="<%= @students.last_name %>">
 
+
 <label for="house-select">Select a house:</label>
-<select id="house" name="house_id">
+<select id="house" name="house_id" selected="<%= @students.house_id %>">
   <% House.all.each do |house| %>
-    <option value="<%= house.id %>"><%= @students.house.name %></option>
-  <%end%>
+  <% if house.id == @students.house_id %>
+    <option value=<%= house.id %> selected><%= house.name.capitalize %></option>
+  <% else %>
+    <option value=<%= house.id %>><%= house.name.capitalize %></option>
+  <% end %>
+<% end %>
+  </select>
+
+<label for="age">Age:</label>
+<input type="number" name="age" id="age" value="<%= @students.age %>"/>
+
+  <input type="submit" value="Edit Student"/>
+
 </form>

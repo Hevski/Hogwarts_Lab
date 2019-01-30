@@ -9,7 +9,7 @@
   <label for="house-select">Select a house:</label>
   <select id="house" name="house_id">
     <% House.all.each do |house| %>
-    <option value="<%= house.id %>"><%= house.name %></option>
+    <option value="<%= house.name %><%= @students.house.name %><%= house.id %>"></option>
     <%end%>
     </select>
 

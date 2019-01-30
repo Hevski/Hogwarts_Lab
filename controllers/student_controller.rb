@@ -25,3 +25,9 @@ get '/students/:id/edit' do
   @students = Student.find(params[:id])
   erb(:"students/edit")
 end
+
+post '/students/:id' do
+  student = Student.new(params)
+  student.update
+  redirect '/students'
+end
